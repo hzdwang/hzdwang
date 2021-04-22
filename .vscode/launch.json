@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "name": "(gdb) 1820",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/srslte/examples/imdea_cc_decoder",
+            "args": ["-f","1820e6", "-c", "445", "-P" ,"2" ,"-p" ,"100","-n","5000"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+    {
+        "name": "(gdb) Test1820.txt",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/srslte/examples/imdea_cc_decoder",
+        //"args": ["-i", "/home/w/5G/2019-04-15-15-54-22-O2-DE___-iq.bin", "-l", "392", "-P" ,"2" ,"-p" ,"50"],
+        
+        //"args": ["-i", "/home/enb/sniffer/testdata/1820.txt","-f","1820e6", "-c", "445", "-P" ,"2" ,"-p" ,"100","-v"],
+        "args": ["-i", "/home/enb/sniffer/testdata/1820.txt","-f","1820e6", "-c", "445", "-P" ,"2" ,"-p" ,"100"],
+        ///home/enb/sniffer/falcon/build/benchmark/imdeaowl/1820.txt
+        //"args": ["-i", "/home/enb/lte/LTEMASTER20210325/LTE-master/build/srslte/examples/1820.txt","-f","1820e6", "-c", "445", "-P" ,"2" ,"-p" ,"100"],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+            {
+                "description": "为 gdb 启用整齐打印",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+        ]
+    }
+    ]
+}
